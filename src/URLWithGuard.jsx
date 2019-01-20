@@ -20,10 +20,18 @@ const fakeAuth = {
     }
 }
 
+/**
+ * 
+ * TypeError: Cannot read property 'displayName' of undefined
+ * 
+ * solution:- Define AuthButtonClass first then use like in next commit
+ * 
+ * 
+ *  */
 
+const AuthButton = withRouter(AuthButtonClass)
 
-
-class AuthButton extends React.Component {
+class AuthButtonClass extends React.Component {
     render() {
         if (fakeAuth.isAuthenticated) {
             return (
@@ -74,7 +82,7 @@ class Protected extends React.Component{
     render(){
         return(
             <div>
-                
+
             </div>
         )
     }
